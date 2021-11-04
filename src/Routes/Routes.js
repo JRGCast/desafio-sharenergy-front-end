@@ -5,7 +5,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/' component={ LandingPage }></Route>
+        <Route exact path='/desafio-sharenergy-front-end' component={ LandingPage }></Route>
       </Switch>
     </BrowserRouter>
   );
