@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import React from "react";
 
 
-const Graphic = ({ currField = 'Alright', currFValue = 40 }) => {
+const Graphic = ({ currField = 'Campo', currFValue = 0 }) => {
   // Sample data
   const data = [
     { argument: currField, value: currFValue },

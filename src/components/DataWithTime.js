@@ -10,7 +10,7 @@ const DataWithTime = () => {
   const [filteredData, setFilteredData] = useState('');
   const [filterLoaded, setFilterLoaded] = useState(false);
   const [objectToButtonData, setObjectToButtonData] = useState({});
-  const [exibitionValue, setExibitionValue] = useState('');
+  const [exibitionValue, setExibitionValue] = useState({ field: 'Campo', value: 0 });
   const [timeSelected, setTimeSelected] = useState({ hour: 5, minutes: 20 });
 
   const inputPropsTime = {
@@ -67,9 +67,8 @@ const DataWithTime = () => {
     const filterData = await allDataWTime.modifiedData.filter(({ tempo_humano }) => tempo_humano === hourMinStr);
     setFilteredData(filterData);
     setFilterLoaded(true);
+    setExibitionValue({ field: 'Campo', value: 0 });
   };
-
-
 
   useEffect(() => {
     const minutesInput = document.getElementById('input-minutes');
@@ -81,6 +80,10 @@ const DataWithTime = () => {
       minutesInput.min = 0;
     }
   });
+
+  const buttonFunc = ({ currentTarget }) => {
+    setExibitionValue({ field: currentTarget.name, value: Number(currentTarget.value) });
+  };
 
   return (
     <main>
@@ -114,9 +117,13 @@ const DataWithTime = () => {
         >Buscar dados
         </Button>
         <div style={ { marginTop: '0.5em' } }>
-          { filterLoaded ? <ToogleButtons valuesObj={ objectToButtonData } /> : '' }
+          { filterLoaded ? <ToogleButtons
+            valuesObj={ objectToButtonData }
+            onClickFunc={ buttonFunc } /> : '' }
         </div>
-        <Graphic />
+        <Graphic
+          currField={ exibitionValue.field }
+          currFValue={ exibitionValue.value } />
       </section>
     </main>
   );

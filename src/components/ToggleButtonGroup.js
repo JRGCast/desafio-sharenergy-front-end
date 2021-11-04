@@ -1,17 +1,17 @@
 import { Button, ButtonGroup } from "@material-ui/core";
 
-const ToogleButtons = ({ valuesObj, onClickFunc }) => {
+const handleClick = ({ currentTarget }) => console.log(currentTarget.value, currentTarget.name);
+const ToogleButtons = ({ valuesObj, onClickFunc = handleClick }) => {
   console.log(valuesObj);
 
   const generateButtons = () => Object.entries(valuesObj).map(([key, value], index) => {
     console.log(key, value);
-    const handleClick = ({ currentTarget }) => console.log(currentTarget.value, currentTarget.name);
     return (
       <Button
         name={ key }
         key={ key }
         value={ value }
-        onClick={ handleClick }
+        onClick={ onClickFunc }
       >{ key }</Button>
     );
   });
