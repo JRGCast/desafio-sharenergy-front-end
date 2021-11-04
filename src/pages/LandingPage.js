@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react";
-const clientApi = require("../api/Clients/access");
+import { accessAllData } from "../api/Clients/access";
 const LandingPage = () => {
   const [body, setTheBody] = useState({});
-  // const url = "https://desafio-sharenergy-back-end.herokuapp.com/clients";
-  // const options = {
-  //   methods: "GET,PUT,POST,DELETE",
-  //   mode: "cors",
-  //   headers: {
-  //     "Access-Control-Allow-Origin": '*'
-  //   },
-  // };
+
   useEffect(() => {
-    const callApi = async () => clientApi.accessAllData(setTheBody);
+    const callApi = async () => accessAllData(setTheBody);
     callApi();
   }, []);
 
