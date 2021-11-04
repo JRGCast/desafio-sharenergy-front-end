@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { accessAllData } from "../api/Clients/access";
 const LandingPage = () => {
   const [body, setTheBody] = useState({});
   const url = "https://desafio-sharenergy-back-end.herokuapp.com/clients";
@@ -10,7 +11,8 @@ const LandingPage = () => {
     },
   };
   useEffect(() => {
-    fetch(url, options).then(response => response.json()).then(jsoned => setTheBody(jsoned));
+    const callApi = async () => accessAllData(setTheBody);
+    callApi();
   }, []);
 
   return (
