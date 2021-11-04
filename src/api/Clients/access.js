@@ -8,5 +8,7 @@ const options = {
   },
 };
 
-export const accessAllData = async (setState) => fetch(clientUrl, options).then(response => response.json()).then(jsoned => setState(jsoned))
+const accessAllData = async (setState) => fetch(clientUrl, options).then(response => response.json()).then(jsoned => setState(jsoned))
   .then(console.log(clientUrl));
+
+export { accessAllData };
