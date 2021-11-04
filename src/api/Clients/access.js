@@ -1,4 +1,5 @@
-const url = "https://desafio-sharenergy-back-end.herokuapp.com/clients";
+require('dotenv').config();
+const clientUrl = process.env.REACT_APP_CLIENT_URL_FULL;
 const options = {
   methods: "GET,PUT,POST,DELETE",
   mode: "cors",
@@ -7,4 +8,8 @@ const options = {
   },
 };
 
-export const accessAllData = async (setState) => fetch(url, options).then(response => response.json()).then(jsoned => setState(jsoned));
+const accessAllData = async (setState) => fetch(clientUrl, options).then(response => response.json()).then(jsoned => setState(jsoned))
+  .then(console.log(clientUrl));
+
+
+module.exports = { accessAllData };
