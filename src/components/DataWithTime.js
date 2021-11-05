@@ -34,15 +34,10 @@ const DataWithTime = () => {
   useEffect(() => {
     const callApi = async () => {
       await accessAllComDataWithRTime(setAllDataWTime);
-      if (typeof (allDataWTime) !== 'string' && allDataWTime.hasOwnProperty('modifiedData')) {
-        setDataLoaded(true);
-      } else {
-        setDataLoaded(false);
-        document.getElementById('span-alert').innerText = 'Não foi possível conectar com a API';
-      }
+        setDataLoaded(true)
     };
     callApi();
-  }, [allDataWTime]);
+  }, []);
 
   useEffect(() => {
     if (filterLoaded) {
@@ -122,7 +117,7 @@ const DataWithTime = () => {
           color='primary'
           onClick={ handleSearchData }
         >Buscar dados
-        </Button><span id='span-alert' style={ { color: 'red' } }></span>
+        </Button>
         <div style={ { marginTop: '0.5em' } }>
           { filterLoaded ? <ToogleButtons
             valuesObj={ objectToButtonData }
