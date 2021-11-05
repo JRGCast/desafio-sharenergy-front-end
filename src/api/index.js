@@ -1,6 +1,7 @@
 require('dotenv').config();
 // Client Urls
 // const clientUrl = process.env.REACT_APP_CLIENT_URL_FULL;
+// const clientAdd = `${clientUrl}/newclient`;
 
 // Company Urls
 // const companyUrl = process.env.REACT_APP_COMPANY_URL_FULL;
