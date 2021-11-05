@@ -1,13 +1,6 @@
 require('dotenv').config();
-// Client Urls
-// const clientUrl = process.env.REACT_APP_CLIENT_URL_FULL;
-// const clientAdd = `${clientUrl}/newclient`;
 
-// Company Urls
-// const companyUrl = process.env.REACT_APP_COMPANY_URL_FULL;
-// const companyHumanTime = `${companyUrl}/datareadabletime`;
-
-const options = {
+const optionsNoBody = {
   methods: "GET,PUT,POST,DELETE",
   mode: "cors",
   headers: {
@@ -15,7 +8,7 @@ const options = {
   },
 };
 
-const accessApi = async (url) => {
+const accessApi = async (url, options = optionsNoBody) => {
   try {
     const fetching = await fetch(url, options);
     const jsoning = await fetching.json();

@@ -1,12 +1,9 @@
 import { Button, TextField } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { accessApi } from "../api";
+import { companyHumanTime } from "../utils/externalUrls";
 import Graphic from "./Graphic";
 import ToogleButtons from "./ToggleButtonGroup";
-
-// Company Url
-const companyUrl = process.env.REACT_APP_COMPANY_URL_FULL;
-const companyHumanTime = `${companyUrl}/datareadabletime`;
 
 const DataWithTime = () => {
   const [allDataWTime, setAllDataWTime] = useState({});

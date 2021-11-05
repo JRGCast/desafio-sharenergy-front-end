@@ -1,9 +1,7 @@
 import { AppBar, Toolbar } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
-const homeUrl = '/desafio-sharenergy-front-end';
-const graphicUrl = `${homeUrl}/graphic`;
-const profitUrl = `${homeUrl}/profit`;
-const addCliUrl = `${homeUrl}/addnewclient`;
+import {homeUrl, graphicUrl, profitUrl, addCliUrl} from '../utils/internalUrls'
+
 
 const NavBar = () => {
   return (
@@ -13,7 +11,7 @@ const NavBar = () => {
           <NavLink to={ homeUrl } color='white'>Home</NavLink>
           <NavLink to={ graphicUrl } color='white'>Para o gráfico</NavLink>
           <NavLink to={ profitUrl } color='white'>Para previsões de lucro</NavLink>
-          <NavLink to={ addCliUrl } color='white'>Para previsões de lucro</NavLink>
+          <NavLink to={ addCliUrl } color='white'>Adicionar Cliente</NavLink>
         </Toolbar>
       </AppBar>
     </nav>
