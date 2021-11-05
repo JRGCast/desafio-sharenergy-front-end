@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/desafio-sharenergy-front-end/static/css/main.f09a1402.chunk.css",
-    "main.js": "/desafio-sharenergy-front-end/static/js/main.1bb93aeb.chunk.js",
-    "main.js.map": "/desafio-sharenergy-front-end/static/js/main.1bb93aeb.chunk.js.map",
-    "runtime-main.js": "/desafio-sharenergy-front-end/static/js/runtime-main.5dad2f3d.js",
-    "runtime-main.js.map": "/desafio-sharenergy-front-end/static/js/runtime-main.5dad2f3d.js.map",
-    "static/js/2.7d4f13de.chunk.js": "/desafio-sharenergy-front-end/static/js/2.7d4f13de.chunk.js",
-    "static/js/2.7d4f13de.chunk.js.map": "/desafio-sharenergy-front-end/static/js/2.7d4f13de.chunk.js.map",
-    "static/js/3.84a110f6.chunk.js": "/desafio-sharenergy-front-end/static/js/3.84a110f6.chunk.js",
-    "static/js/3.84a110f6.chunk.js.map": "/desafio-sharenergy-front-end/static/js/3.84a110f6.chunk.js.map",
+    "main.js": "/desafio-sharenergy-front-end/static/js/main.0b5cf96d.chunk.js",
+    "main.js.map": "/desafio-sharenergy-front-end/static/js/main.0b5cf96d.chunk.js.map",
+    "runtime-main.js": "/desafio-sharenergy-front-end/static/js/runtime-main.72e01613.js",
+    "runtime-main.js.map": "/desafio-sharenergy-front-end/static/js/runtime-main.72e01613.js.map",
+    "static/js/2.92da1250.chunk.js": "/desafio-sharenergy-front-end/static/js/2.92da1250.chunk.js",
+    "static/js/2.92da1250.chunk.js.map": "/desafio-sharenergy-front-end/static/js/2.92da1250.chunk.js.map",
+    "static/js/3.7ca560e2.chunk.js": "/desafio-sharenergy-front-end/static/js/3.7ca560e2.chunk.js",
+    "static/js/3.7ca560e2.chunk.js.map": "/desafio-sharenergy-front-end/static/js/3.7ca560e2.chunk.js.map",
     "index.html": "/desafio-sharenergy-front-end/index.html",
     "static/css/main.f09a1402.chunk.css.map": "/desafio-sharenergy-front-end/static/css/main.f09a1402.chunk.css.map",
-    "static/js/2.7d4f13de.chunk.js.LICENSE.txt": "/desafio-sharenergy-front-end/static/js/2.7d4f13de.chunk.js.LICENSE.txt"
+    "static/js/2.92da1250.chunk.js.LICENSE.txt": "/desafio-sharenergy-front-end/static/js/2.92da1250.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5dad2f3d.js",
-    "static/js/2.7d4f13de.chunk.js",
+    "static/js/runtime-main.72e01613.js",
+    "static/js/2.92da1250.chunk.js",
     "static/css/main.f09a1402.chunk.css",
-    "static/js/main.1bb93aeb.chunk.js"
+    "static/js/main.0b5cf96d.chunk.js"
   ]
 }
