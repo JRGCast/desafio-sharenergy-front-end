@@ -34,7 +34,7 @@ const DataWithTime = () => {
   useEffect(() => {
     const callApi = async () => {
       await accessAllComDataWithRTime(setAllDataWTime);
-        setDataLoaded(true)
+      setDataLoaded(true);
     };
     callApi();
   }, []);
@@ -59,7 +59,9 @@ const DataWithTime = () => {
   };
 
   const formatInputTime = ({ target: { name, value } }) => {
-    setTimeSelected({ ...timeSelected, [name]: Number(value) });
+    if (Number(value) < 10) value = `0${value}`;
+    setTimeSelected({ ...timeSelected, [name]: (value) });
+    console.log(timeSelected);
   };
 
   const handleSearchData = async () => {
