@@ -129,7 +129,6 @@ const DataWithTime = () => {
           currField={ exibitionValue.field }
           currFValue={ exibitionValue.value } />
       </section>
-      <button type='button' onClick={ () => console.log(JSON.stringify(allDataWTime)) }>Console Data</button>
     </main>
   );
 };

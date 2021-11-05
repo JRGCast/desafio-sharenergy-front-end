@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import GraphicPage from '../pages/GraphicPage';
 import LandingPage from '../pages/LandingPage';
 import ProfitPage from '../pages/ProfitPage';
@@ -8,13 +8,11 @@ const profitUrl = `${homeUrl}/profit`;
 
 const Routes = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path={ homeUrl } component={ LandingPage }></Route>
-        <Route path={ graphicUrl } component={ GraphicPage }></Route>
-        <Route path={ profitUrl } component={ ProfitPage }></Route>
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path={ homeUrl } component={ LandingPage }></Route>
+      <Route path={ graphicUrl } component={ GraphicPage }></Route>
+      <Route path={ profitUrl } component={ ProfitPage }></Route>
+    </Switch>
   );
 };
 
