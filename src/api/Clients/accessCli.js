@@ -9,10 +9,15 @@ const options = {
 };
 
 const accessAllCliData = async (setState) => {
-  const fetching = await fetch(clientUrl, options);
-  const jsoning = await fetching.json();
-  const setTheState = setState(jsoning);
-  return setTheState;
+  try {
+    const fetching = await fetch(clientUrl, options);
+    const jsoning = await fetching.json();
+    const setTheState = setState(jsoning);
+    return setTheState;
+  } catch (error) {
+    console.log(error);
+    return setState(JSON.stringify(error));
+  }
 };
 
 export { accessAllCliData };
