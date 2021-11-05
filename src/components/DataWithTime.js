@@ -1,8 +1,12 @@
 import { Button, TextField } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { accessAllComDataWithRTime } from "../api/Company/accessCom";
+import { accessApi } from "../api";
 import Graphic from "./Graphic";
 import ToogleButtons from "./ToggleButtonGroup";
+
+// Company Url
+const companyUrl = process.env.REACT_APP_COMPANY_URL_FULL;
+const companyHumanTime = `${companyUrl}/datareadabletime`;
 
 const DataWithTime = () => {
   const [allDataWTime, setAllDataWTime] = useState({});
@@ -12,6 +16,7 @@ const DataWithTime = () => {
   const [objectToButtonData, setObjectToButtonData] = useState({});
   const [exibitionValue, setExibitionValue] = useState({ field: 'Campo', value: 0 });
   const [timeSelected, setTimeSelected] = useState({ hour: 5, minutes: 20 });
+
 
   const inputPropsTime = {
     inputPropsHour: {
@@ -33,8 +38,11 @@ const DataWithTime = () => {
 
   useEffect(() => {
     const callApi = async () => {
-      await accessAllComDataWithRTime(setAllDataWTime);
-      setDataLoaded(true);
+      const result = await accessApi(companyHumanTime);
+      if (result.hasOwnProperty('modifiedData')) {
+        setAllDataWTime(result);
+        setDataLoaded(true);
+      }
     };
     callApi();
   }, []);
