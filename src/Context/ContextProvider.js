@@ -1,20 +1,21 @@
-import { createContext, useState } from 'react';
+import { useState } from 'react';
+import AppContext from './AppContext';
 
-
-const CreatedContext = createContext();
 
 const ContextProvider = ({ children }) => {
+  const [currClientName, setCurrClientName] = useState('Admin');
   const [allCompanyData, setAllCompanyData] = useState({});
-  const [allCurrClientData, setAllCurrClientData] = useState({});
 
   const contextValue = {
     allCompanyData,
-    allCurrClientData
+    currClientName,
+    setCurrClientName,
+    setAllCompanyData
   };
   return (
-    <CreatedContext.Provider value={ contextValue }>
+    <AppContext.Provider value={ contextValue }>
       { children }
-    </CreatedContext.Provider>
+    </AppContext.Provider>
   );
 
 };

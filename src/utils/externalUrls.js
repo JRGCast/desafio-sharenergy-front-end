@@ -4,8 +4,8 @@ require('dotenv').config();
 export const clientUrl = process.env.REACT_APP_CLIENT_URL_FULL;
 export const clientFindName = `${clientUrl}/byname`;
 export const clientAdd = `${clientUrl}/newclient`;
-export const clientUpdate = `${clientUrl}/updatelient`;
-export const clientDelete = `${clientUrl}/deletelient`;
+export const clientUpdate = `${clientUrl}/updateclient`;
+export const clientDelete = `${clientUrl}/deleteclient`;
 
 
 // Company Urls
