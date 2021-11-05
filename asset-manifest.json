@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/desafio-sharenergy-front-end/static/css/main.f09a1402.chunk.css",
-    "main.js": "/desafio-sharenergy-front-end/static/js/main.307a9d11.chunk.js",
-    "main.js.map": "/desafio-sharenergy-front-end/static/js/main.307a9d11.chunk.js.map",
-    "runtime-main.js": "/desafio-sharenergy-front-end/static/js/runtime-main.1e5d46e0.js",
-    "runtime-main.js.map": "/desafio-sharenergy-front-end/static/js/runtime-main.1e5d46e0.js.map",
-    "static/js/2.eb7f021c.chunk.js": "/desafio-sharenergy-front-end/static/js/2.eb7f021c.chunk.js",
-    "static/js/2.eb7f021c.chunk.js.map": "/desafio-sharenergy-front-end/static/js/2.eb7f021c.chunk.js.map",
-    "static/js/3.209b2dc8.chunk.js": "/desafio-sharenergy-front-end/static/js/3.209b2dc8.chunk.js",
-    "static/js/3.209b2dc8.chunk.js.map": "/desafio-sharenergy-front-end/static/js/3.209b2dc8.chunk.js.map",
-    "static/js/4.164c0f63.chunk.js": "/desafio-sharenergy-front-end/static/js/4.164c0f63.chunk.js",
-    "static/js/4.164c0f63.chunk.js.map": "/desafio-sharenergy-front-end/static/js/4.164c0f63.chunk.js.map",
+    "main.js": "/desafio-sharenergy-front-end/static/js/main.5d16572e.chunk.js",
+    "main.js.map": "/desafio-sharenergy-front-end/static/js/main.5d16572e.chunk.js.map",
+    "runtime-main.js": "/desafio-sharenergy-front-end/static/js/runtime-main.71680f15.js",
+    "runtime-main.js.map": "/desafio-sharenergy-front-end/static/js/runtime-main.71680f15.js.map",
+    "static/js/2.62b014e2.chunk.js": "/desafio-sharenergy-front-end/static/js/2.62b014e2.chunk.js",
+    "static/js/2.62b014e2.chunk.js.map": "/desafio-sharenergy-front-end/static/js/2.62b014e2.chunk.js.map",
+    "static/js/3.0902cb1e.chunk.js": "/desafio-sharenergy-front-end/static/js/3.0902cb1e.chunk.js",
+    "static/js/3.0902cb1e.chunk.js.map": "/desafio-sharenergy-front-end/static/js/3.0902cb1e.chunk.js.map",
+    "static/js/4.1b313aae.chunk.js": "/desafio-sharenergy-front-end/static/js/4.1b313aae.chunk.js",
+    "static/js/4.1b313aae.chunk.js.map": "/desafio-sharenergy-front-end/static/js/4.1b313aae.chunk.js.map",
     "static/js/5.93409b3f.chunk.js": "/desafio-sharenergy-front-end/static/js/5.93409b3f.chunk.js",
     "static/js/5.93409b3f.chunk.js.map": "/desafio-sharenergy-front-end/static/js/5.93409b3f.chunk.js.map",
     "index.html": "/desafio-sharenergy-front-end/index.html",
     "static/css/main.f09a1402.chunk.css.map": "/desafio-sharenergy-front-end/static/css/main.f09a1402.chunk.css.map",
-    "static/js/2.eb7f021c.chunk.js.LICENSE.txt": "/desafio-sharenergy-front-end/static/js/2.eb7f021c.chunk.js.LICENSE.txt",
-    "static/js/3.209b2dc8.chunk.js.LICENSE.txt": "/desafio-sharenergy-front-end/static/js/3.209b2dc8.chunk.js.LICENSE.txt"
+    "static/js/2.62b014e2.chunk.js.LICENSE.txt": "/desafio-sharenergy-front-end/static/js/2.62b014e2.chunk.js.LICENSE.txt",
+    "static/js/3.0902cb1e.chunk.js.LICENSE.txt": "/desafio-sharenergy-front-end/static/js/3.0902cb1e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1e5d46e0.js",
-    "static/js/3.209b2dc8.chunk.js",
+    "static/js/runtime-main.71680f15.js",
+    "static/js/2.62b014e2.chunk.js",
     "static/css/main.f09a1402.chunk.css",
-    "static/js/main.307a9d11.chunk.js"
+    "static/js/main.5d16572e.chunk.js"
   ]
 }
