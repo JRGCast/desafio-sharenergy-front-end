@@ -10,6 +10,6 @@
 
 ### Outras informações:
 - Feito a maior parte com Material Ui;
-- API deployada em Heroku + Mongo Atlas;
+- API deployada em Heroku + Mongo Atlas (link para o repositório https://github.com/JRGCast/desafio-sharenergy-back-end);
 - Deploy feito em https://jrgcast.github.io/desafio-sharenergy-front-end/
 - Devido a imprevistos, não foi possível consertar os tantos bugs e falhas;
