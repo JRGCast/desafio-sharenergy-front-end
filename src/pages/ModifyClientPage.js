@@ -1,7 +1,98 @@
-import ActionClient from "../components/ActionClient";
+import { Button, LinearProgress } from "@material-ui/core";
+import { useEffect, useState } from "react";
+import { accessApi } from "../api";
+import ModifyClientForm from "../components/ModifyClientForm";
+import { clientUpdate } from "../utils/externalUrls";
 
 const ModifyClientPage = () => {
-  return ( <ActionClient method="PUT" page="Modificar" pageAction="deletado/a" /> );
-}
- 
+  const [clientData, setClientData] = useState({ nomeCliente: '', });
+  const [updateData, setUpdateData] = useState({ novoNome: '', novasUsinas: [] });
+  const [usinasObj, setUsinasObj] = useState({ usinaId: 1, percentualDeParticipacao: 0 });
+  const [answerApi, setAnswerApi] = useState('');
+  const [showSpinner, setShowSpinner] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const fillClientOldName = ({ target: { name, value } }) => {
+    setClientData({ ...clientData, [name]: value });
+    console.log(clientData);
+  };
+
+  const fillClientNewName = ({ target: { name, value } }) => {
+    setUpdateData({ ...updateData, [name]: value });
+    console.log(updateData);
+  };
+
+  const fillUsinaObj = ({ target: { name, value } }) => {
+    setUsinasObj({ ...usinasObj, [name]: Number(value) });
+    setUpdateData({ ...updateData, novasUsinas: [usinasObj] });
+  };
+
+  const requestBody = updateData.novasUsinas.length > 0 ?
+    {
+      clientData,
+      updateData
+    } : {
+      clientData,
+      updateData: { novoNome: updateData.novoNome, novasUsinas: undefined }
+    };
+
+  const submitOptions = {
+    method: "PUT",
+    mode: "cors",
+    headers: {
+      "Access-Control-Allow-Origin": '*',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody)
+  };
+  const handleSubmitClient = async () => {
+    console.log(updateData.novasUsinas.length > 0, requestBody);
+    setShowSpinner(true);
+    const sendToApi = await accessApi(clientUpdate, submitOptions);
+    setAnswerApi(sendToApi);
+  };
+
+  useEffect(() => {
+    if (answerApi !== '') {
+      setShowSpinner(false);
+      setShowSuccess(true);
+    }
+    console.log(answerApi);
+  }, [answerApi]);
+
+  useEffect(() => {
+    console.log(showSpinner);
+  }, [showSpinner]);
+
+  const handleRedo = () => {
+    setAnswerApi('');
+    setShowSuccess(false);
+    setClientData({ nomeCliente: '' });
+    setUpdateData({ novoNome: '', novasUsinas: [] });
+  };
+
+  const functionsObject = { fillClientOldName, fillClientNewName, fillUsinaObj, handleSubmitClient };
+  return (
+    <main>
+      <h1>Modificar Cliente</h1>
+      <ModifyClientForm
+        functionsObj={ functionsObject }
+        selectValue={ usinasObj.usinaId }
+      />
+      <section>
+        { showSpinner ? <LinearProgress style={ { margin: '1em auto', width: '50%' } } /> : "" }
+        { showSuccess ?
+          <>
+            <p> Cliente modificado! </p>
+            <Button
+              variant="contained"
+              color='primary'
+              onClick={ handleRedo }
+              style={ { width: '40%', margin: '0 auto' } }>Outro?
+            </Button>
+          </> : "" }
+      </section>
+    </main>);
+};
+
 export default ModifyClientPage;
