@@ -10,7 +10,6 @@ const ProfitPage = () => {
 
   const handleChange = ({ target: { name, value } }) => {
     setnumbersCalc({ ...numbersCalc, [name]: Number(value) });
-    console.log(numbersCalc);
   };
 
   useEffect(() => {

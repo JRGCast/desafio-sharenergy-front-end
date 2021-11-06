@@ -12,11 +12,9 @@ const ActionClient = ({ method, url, showPercentage, showUsinData, page, pageAct
 
   const fillCDataObj = ({ target: { name, value } }) => {
     setNewClientData({ ...newClientData, [name]: value });
-    console.log(newClientData)
   };
   const fillUsinaObj = ({ target: { name, value } }) => {
     setUsinasObj({ ...usinasObj, [name]: Number(value) });
-    console.log(usinasObj);
   };
 
   const submitOptions = {
@@ -47,10 +45,6 @@ const ActionClient = ({ method, url, showPercentage, showUsinData, page, pageAct
       setShowSuccess(true);
     }
   }, [answerApi]);
-
-  useEffect(() => {
-    console.log(showSpinner);
-  }, [showSpinner]);
 
   const handleRedo = () => {
     setAnswerApi('');

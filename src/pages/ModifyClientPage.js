@@ -14,12 +14,10 @@ const ModifyClientPage = () => {
 
   const fillClientOldName = ({ target: { name, value } }) => {
     setClientData({ ...clientData, [name]: value });
-    console.log(clientData);
   };
 
   const fillClientNewName = ({ target: { name, value } }) => {
     setUpdateData({ ...updateData, [name]: value });
-    console.log(updateData);
   };
 
   const fillUsinaObj = ({ target: { name, value } }) => {
@@ -46,7 +44,6 @@ const ModifyClientPage = () => {
     body: JSON.stringify(requestBody)
   };
   const handleSubmitClient = async () => {
-    console.log(updateData.novasUsinas.length > 0, requestBody);
     setShowSpinner(true);
     const sendToApi = await accessApi(clientUpdate, submitOptions);
     setAnswerApi(sendToApi);
@@ -57,12 +54,7 @@ const ModifyClientPage = () => {
       setShowSpinner(false);
       setShowSuccess(true);
     }
-    console.log(answerApi);
   }, [answerApi]);
-
-  useEffect(() => {
-    console.log(showSpinner);
-  }, [showSpinner]);
 
   const handleRedo = () => {
     setAnswerApi('');

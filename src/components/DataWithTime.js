@@ -66,7 +66,6 @@ const DataWithTime = () => {
   const formatInputTime = ({ target: { name, value } }) => {
     if (Number(value) < 10) value = `0${value}`;
     setTimeSelected({ ...timeSelected, [name]: (value) });
-    console.log(timeSelected);
   };
 
   const handleSearchData = async () => {
