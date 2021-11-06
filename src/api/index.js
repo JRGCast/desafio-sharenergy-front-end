@@ -10,6 +10,16 @@ const optionsNoBody = {
 
 const accessApi = async (url, options = optionsNoBody) => {
   try {
+    console.log('fetch', options);
+    console.log('stringy opções', JSON.stringify(options));
+    console.log('Objeto do back-end', JSON.stringify({
+      "clientData": {
+        "nomeCliente": "Fulano",
+      },
+      "updateData": {
+        "novoNome": "Beltrano"
+      }
+    }));
     const fetching = await fetch(url, options);
     const jsoning = await fetching.json();
     return jsoning;
@@ -19,4 +29,4 @@ const accessApi = async (url, options = optionsNoBody) => {
   }
 };
 
-export { accessApi, };
+export { accessApi };

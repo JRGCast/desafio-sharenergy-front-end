@@ -12,7 +12,6 @@ const ModifyClientForm = ({ functionsObj, selectValue }) => {
         label="Nome do Cliente"
         name="nomeCliente"
         type="text"
-        defaultValue="Maria Coelho"
         variant="filled"
         onChange={ (e) => fillClientOldName(e) }
         InputLabelProps={ {

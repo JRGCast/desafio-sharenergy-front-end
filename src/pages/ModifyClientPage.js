@@ -31,7 +31,7 @@ const ModifyClientPage = () => {
       updateData
     } : {
       clientData,
-      updateData: { novoNome: updateData.novoNome, novasUsinas: undefined }
+      updateData: { novoNome: updateData.novoNome }
     };
 
   const submitOptions = {
@@ -47,6 +47,7 @@ const ModifyClientPage = () => {
     setShowSpinner(true);
     const sendToApi = await accessApi(clientUpdate, submitOptions);
     setAnswerApi(sendToApi);
+    console.log(submitOptions);
   };
 
   useEffect(() => {
